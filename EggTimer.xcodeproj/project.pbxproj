@@ -11,6 +11,10 @@
 		CD3BD01F1FE2788D00619563 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BD01E1FE2788D00619563 /* ViewController.swift */; };
 		CD3BD0211FE2788D00619563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3BD0201FE2788D00619563 /* Assets.xcassets */; };
 		CD3BD0241FE2788D00619563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BD0221FE2788D00619563 /* Main.storyboard */; };
+		CD3BD02D1FE29F9D00619563 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BD02C1FE29F9D00619563 /* PrefsViewController.swift */; };
+		CD3BD0321FE2BC2700619563 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BD0311FE2BC2700619563 /* EggTimer.swift */; };
+		CD3BD0341FE319BE00619563 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BD0331FE319BE00619563 /* Preferences.swift */; };
+		CD3BD0361FE5435400619563 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD3BD0351FE5435400619563 /* ding.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		CD3BD0231FE2788D00619563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD3BD0251FE2788D00619563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3BD0261FE2788D00619563 /* EggTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggTimer.entitlements; sourceTree = "<group>"; };
+		CD3BD02C1FE29F9D00619563 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		CD3BD0311FE2BC2700619563 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		CD3BD0331FE319BE00619563 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		CD3BD0351FE5435400619563 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +61,42 @@
 		CD3BD01B1FE2788D00619563 /* EggTimer */ = {
 			isa = PBXGroup;
 			children = (
+				CD3BD02F1FE2BB8E00619563 /* Model */,
+				CD3BD02E1FE2BB7900619563 /* View Controllers */,
 				CD3BD01C1FE2788D00619563 /* AppDelegate.swift */,
-				CD3BD01E1FE2788D00619563 /* ViewController.swift */,
 				CD3BD0201FE2788D00619563 /* Assets.xcassets */,
 				CD3BD0221FE2788D00619563 /* Main.storyboard */,
+				CD3BD0351FE5435400619563 /* ding.mp3 */,
+				CD3BD0301FE2BBA500619563 /* Supporting Files */,
+			);
+			path = EggTimer;
+			sourceTree = "<group>";
+		};
+		CD3BD02E1FE2BB7900619563 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BD01E1FE2788D00619563 /* ViewController.swift */,
+				CD3BD02C1FE29F9D00619563 /* PrefsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CD3BD02F1FE2BB8E00619563 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BD0311FE2BC2700619563 /* EggTimer.swift */,
+				CD3BD0331FE319BE00619563 /* Preferences.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD3BD0301FE2BBA500619563 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				CD3BD0251FE2788D00619563 /* Info.plist */,
 				CD3BD0261FE2788D00619563 /* EggTimer.entitlements */,
 			);
-			path = EggTimer;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +132,11 @@
 					CD3BD0181FE2788D00619563 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,6 +165,7 @@
 			files = (
 				CD3BD0211FE2788D00619563 /* Assets.xcassets in Resources */,
 				CD3BD0241FE2788D00619563 /* Main.storyboard in Resources */,
+				CD3BD0361FE5435400619563 /* ding.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3BD01F1FE2788D00619563 /* ViewController.swift in Sources */,
+				CD3BD0321FE2BC2700619563 /* EggTimer.swift in Sources */,
+				CD3BD0341FE319BE00619563 /* Preferences.swift in Sources */,
+				CD3BD02D1FE29F9D00619563 /* PrefsViewController.swift in Sources */,
 				CD3BD01D1FE2788D00619563 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,13 +308,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EggTimer/EggTimer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "EggTimer/Supporting Files/EggTimer.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = EggTimer/Info.plist;
+				DEVELOPMENT_TEAM = 5N9G45L7Z6;
+				INFOPLIST_FILE = "$(SRCROOT)/EggTimer/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alspirichev.EggTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -278,13 +326,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EggTimer/EggTimer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "EggTimer/Supporting Files/EggTimer.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = EggTimer/Info.plist;
+				DEVELOPMENT_TEAM = 5N9G45L7Z6;
+				INFOPLIST_FILE = "$(SRCROOT)/EggTimer/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alspirichev.EggTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
